@@ -1,0 +1,117 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} Projects {% endblock title %} 
+
+{% block body %}
+<main id="main" class="border border-dark rounded-5 bg-light">
+  <section>
+    <h1 class="text-center rounded-2 text-white p-3 bg-dark">My Projects</h1>
+    <div class="container border-black">
+      <h2 class="text-center rounded-5 text-white p-2 bg-primary">
+        Blogging Application
+      </h2>
+      <div class="card mb-3">
+        <img
+          src="{% static 'assets/img/blog1.png' %}"
+          class="card-img-top rounded-3"
+          alt="Wild Landscape"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center h2 text-danger">
+            Blogging Application
+          </h5>
+          <br />
+          <p class="card-text text-primary">
+                                        Developed a website combines the power of Spring Boot, ReactJS,
+            Bootstrap, and MySQL to deliver an immersive user experience with a
+            range of exciting features. The website offers a seamless Sign-in
+            and Sign-up process, allowing users to create personalized accounts
+            and securely access the platform.
+          </p>
+          <p class="card-text text-primary">
+            A website with the ability to interact with posts and comments.
+            Users can effortlessly create, edit, and delete posts, as well as
+            leave comments on existing content.
+          </p>
+          <p class="card-text text-primary">
+            To make the learning process more enjoyable, our website also
+            features a Java tutorial section. Users can access a comprehensive
+            collection of Java tutorials, enriched with insightful memes to
+            lighten the learning experience. Whether you're a beginner or an
+            experienced Java developer, our tutorials cater to all skill levels,
+            ensuring a rewarding and entertaining learning journey.
+          </p>
+          <p class="card-text text-primary ">
+            We prioritize security and have implemented robust features such as
+            Spring Security and JWT (JSON Web Tokens). These technologies work
+            together to ensure that user data and interactions are protected.
+            With Spring Security, we provide authentication and authorization
+            mechanisms to safeguard user accounts and sensitive information. JWT
+            enables secure and efficient communication between the client and
+            server, enhancing the overall security of our platform.
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Updated on 20-07-2023 </small>
+          </p>
+        </div>
+        <div class="card text-center text-primary bg-dark">
+          <div class="card-body">
+            <h5>Access code from my below github link</h5>
+            <a href="https://github.com/Sathya7032/BlogginApp"
+              ><button class="btn btn-primary">source code</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+       <hr class="border-top-1">
+    <br>
+
+    <div class="container border-black">
+      <h2 class="text-center rounded-5 text-white p-2 bg-primary">
+        Bank Application
+      </h2>
+      <div class="card mb-3">
+        <img
+          src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+          class="card-img-top"
+          alt="Wild Landscape"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center h2 text-danger">
+            Bank Application
+          </h5>
+          <br />
+          <p class="card-text text-primary">
+            Our Banking Application project is a robust and secure web-based
+            platform built using JSP, Servlets, SQL, HTML, and CSS. It offers a
+            comprehensive suite of banking services, allowing customers to
+            perform various financial transactions such as account management,
+            fund transfers, balance inquiries, and transaction history. The
+            intuitive and visually appealing frontend design, created with HTML
+            and CSS, ensures a seamless user experience. With a reliable SQL
+            database backend, our application ensures the confidentiality and
+            integrity of customer data. Experience the convenience and
+            efficiency of online banking with our feature-rich and userfriendly
+            Banking Application.
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Updated on 20-07-2023 </small>
+          </p>
+        </div>
+        <div class="card text-center text-primary bg-dark">
+          <div class="card-body">
+            <h5>Access code from my below github link</h5>
+            <a href="https://github.com/Sathya7032/sdfc-bank-application"
+              ><button class="btn btn-primary">source code</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock body %}
