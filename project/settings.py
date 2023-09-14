@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portfolio',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,7 @@ DATABASES = {
     }
 }
 
-DATABASES["default"] = dj_database_url.parse("postgres://sathyadb_user:OK5D8Nb55DlXUhKuEkUhArepKhUxtF2f@dpg-citt7cliuiedpv5v3a6g-a.oregon-postgres.render.com/sathyadb")
+DATABASES['default']= dj_database_url.parse("postgres://sathya:rNcNtkCifMm9Tf4KGcMUlBj0PsQnfkIY@dpg-ck1hd6eru70s73dt8cmg-a.singapore-postgres.render.com/sathyadb1")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -123,6 +124,10 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 

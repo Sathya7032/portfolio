@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% block body %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-10">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+              <li class="page-item">
+                <a class="page-link" href="/home/addcat/">add category</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="/admin/portfolio/post/add/"
+                  >add post</a
+                >
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="/admin/portfolio/note/add/"
+                  >add note</a
+                >
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="/admin/portfolio/dairy/add/"
+                  >add dairy</a
+                >
+              </li>
+            </ul>
+          </nav>
+          
+          <h1 class="text-center" style="font-weight: bold; color: brown">
+            CATEGORIES
+          </h1>
+          {% for cat in cats %} {% if forloop.counter0|divisibleby:3 %}
+          <div class="row">
+            {% endif %}
+            <div class="card m-2" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="/media/{{cat.image}}"
+                alt="Card image cap"
+                style="height: 100%;width: 100%;"
+              />
+              <div class="card-body">
+                <h5 class="card-title">{{cat.title}}</h5>
+                <p class="card-text">{{cat.discription}}</p>
+                <a href="/home/category/{{cat.url}}" class="btn btn-primary"
+                  >View</a
+                >
+              </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 or forloop.last %}
+          </div>
+          <br />{% endif %} {% endfor %}
+          <div class="container">
+            <h1 class="text-center">Notes</h1> 
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Note</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for n in note  %}
+                    <tr>
+                      <td>{{n.id}}</td>
+                      <td><a href="/note/{{n.url}}">{{n.title}}</a></td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+          </div>
+          <div class="container m-3">
+            <h1 class="text-center">Dairy</h1> 
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for n in dairy  %}
+                    <tr>
+                      <td>{{n.id}}</td>
+                      <td><a href="/dairy/{{n.url}}">{{n.date}}</a></td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    {% endblock body %}
+  </body>
+</html>
