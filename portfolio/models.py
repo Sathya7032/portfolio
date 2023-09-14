@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.html import format_html
+from ckeditor_uploader.fields import RichTextUploadingField
 from ckeditor.fields import RichTextField
 # Create your models here.
 class Contact(models.Model):
