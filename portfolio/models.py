@@ -31,7 +31,7 @@ class Post(models.Model):
     post_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='post/')
-    content = RichTextField()
+    content = TextField()
     url = models.CharField(max_length=100,unique=True)
     cate = models.ForeignKey(Category, on_delete=models.CASCADE)  
 
@@ -47,7 +47,7 @@ class Post(models.Model):
 
 class Note(models.Model):
     title = models.CharField(max_length=100)
-    notes = RichTextField()
+    notes = TextField()
     url = models.CharField(max_length=100, unique=True,null=False)
 
     def __str__(self):
@@ -56,7 +56,7 @@ class Note(models.Model):
 
 class Dairy(models.Model):
     date = models.DateField(unique=True)
-    dairy = RichTextField()
+    dairy = TextField()
     url = models.CharField(max_length=100,unique=True,null=False)    
 
     def __str__(self):
